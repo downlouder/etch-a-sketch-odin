@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Etch A Sketch</h1>
+    </header>
+
+    <main>
+        <div id="container">
+            <div id="grid"></div>
+            <div class="settings">
+                <input type="color" id="colorPicker" value="black">
+                <button id="colorBtn" onclick="colorByPicker()">Choose color</button>
+                <button id="rainbowBtn">Rainbow</button>
+                <button id="eraserBtn">Eraser</button>
+                <button id="clearBtn" onclick="clearGrid()">Clear</button>
+                <div>
+                    <input id="changingSize" type="text" placeholder="Set Size of Board" value="16" onchange="changeSize(this.value)">
+                    <button>Set size</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          downlouder
+        </p>
+        <a href="https://github.com/downlouder" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
