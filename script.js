@@ -88,6 +88,8 @@ function activateButton(newMode) {
 function changeSize(input) {
     if (input >= 1 && input <= 100) {
         makeGrid(input);
+        setCurrentSize(value)
+        reloadGrid()
     }
     else {
         alert('Please enter correct number')
@@ -100,11 +102,6 @@ function colorSquare() {
 function reloadGrid() {
     clearGrid()
     makeGrid(currentSize)
-}
-
-function changeSize(value) {
-    setCurrentSize(value)
-    reloadGrid()
 }
 
 function clearGrid() {

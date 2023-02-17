@@ -1,28 +1,101 @@
+/* BASIC */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
 body {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    background: rgb(96,92,181);
+    background: linear-gradient(60deg, rgba(96,92,181,1) 0%, rgba(66,140,193,1) 35%, rgba(195,245,255,1) 100%);
 }
+header {
+    margin-top: 16px;
+    color: #202020;
+}
+
+/* GRID */
 #grid {
     display: grid;
-    border: 1px solid black;
-    width: 500px;
-    height: 500px;
+    border: 10px solid #282828;
+    width: 520px;
+    height: 520px;
+}
+/* SETTINGS */
+button {
+    padding: 16px 0;
+}
+#colorPicker {
+    min-width: 64px;
+    min-height: 64px;
+    padding: 4px;
+}
+#changingSize {
+    outline: none;
+    text-align: center;
+}
+#changingSize::placeholder {
+    color: #282828;
 }
 
-/* #container {
-    width: 384px;
+button, #colorPicker, #changingSize {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 300ms;
+    border: none;
+
+}
+button:hover, #colorPicker:hover, #changingSize:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+button:active, #colorPicker:active, #changingSize:active {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.settings, .row {
     display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .grid-item {
-    box-sizing: border-box;
-    width: 24px;
-    height: 24px;
-    border: 1px solid black;
+    width: 520px;
 }
-.grid-item:hover {
-    background-color: black;
-} */
+.row > * {
+    flex: 1;
+}
+.settings {
+    flex-wrap: wrap;
+    border: 10px solid #282828;
+    border-top: none;
+}
+
+.row:nth-child(2) {
+    border-top: 2px solid #282828;
+    border-bottom: 2px solid #282828;
+}
+
+/* FOOTER */
+a {
+    text-decoration: none;
+    color: #202020;
+}
+a:hover {
+    color: #555;
+} 
+a:active {
+    color: #7b7b7b;
+}
+
+footer {
+    font-size: 24px;
+    color: #202020;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 8px;
+}

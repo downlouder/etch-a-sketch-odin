@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
     <title>Etch A Sketch</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,12 +16,16 @@
         <div id="container">
             <div id="grid"></div>
             <div class="settings">
-                <input type="color" id="colorPicker" value="black">
-                <button id="colorBtn">Classic Painting</button>
-                <button id="rainbowBtn">Rainbow Painting</button>
-                <button id="eraserBtn">Eraser</button>
-                <button id="clearBtn">Clear</button>
-                <div>
+                <div class="row">
+                    <input type="color" id="colorPicker" value="black">
+                    <button id="colorBtn">Classic Painting</button>
+                    <button id="rainbowBtn">Rainbow Painting</button>
+                </div>
+                <div class="row">
+                    <button id="eraserBtn">Eraser</button>
+                    <button id="clearBtn">Clear</button>
+                </div>
+                <div class="row">
                     <input id="changingSize" type="text" placeholder="Set Size from 1 to 100" value="16" onchange="changeSize(this.value)">
                     <button>Set size</button>
                 </div>
@@ -31,14 +35,16 @@
 
     <footer class="footer">
         <p>
-          Copyright ©
-          <script>
-            document.write(new Date().getFullYear())
-          </script>
-          downlouder
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="https://github.com/downlouder" target="_blank">
+                downlouder
+            </a>
         </p>
         <a href="https://github.com/downlouder" target="_blank">
-          <i class="fab fa-github"></i>
+            <i class="fab fa-github"></i>
         </a>
     </footer>
     <script src="script.js"></script>
